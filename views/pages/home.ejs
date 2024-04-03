@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <%- include('../layouts/head', { title: 'bMac | buyMeACoffee' }) %>
+</head>
+<body class="background on-surface-text">
+
+<!-- top bar -->
+<header class="top-bar">
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="/images/logo.svg" alt="BuyMeACoffee">
+    </a>
+  </div>
+</header>
+
+<main class="main">
+  <article>
+    <!-- #HERO -->
+    <section class="hero">
+      <div class="container">
+        <figure class="hero-banner">
+          <img src="/images/banner.png" width="944" height="280" alt="" class="img-cover">
+        </figure>
+        <div class="hero-card">
+          <figure class="card-banner">
+            <img src="images/profile-photo.png" width="120" height="120" alt="" class="img-cover">
+            <!-- 
+              your server, you would need to set up a route to handle requests 
+              to `/proxy` and fetch the image from `https://dmytroony.github.io/src/img/me.png`.
+              <img src="/proxy?url=https://dmytroony.github.io/src/img/me.png"> 
+            -->
+            <!-- <img src="https://dmytroony.github.io/src/img/me.png" width="120" height="120" alt="" class="img-cover"> -->
+          </figure>
+          <div class="card-content">
+            <h2 class="title-large">BuyMeACoffee</h2>
+            <p class="subtitle body-medium on-surface-variant-text">
+              JS Software Engineer
+            </p>
+            <p class="card-text body-medium on-surface-variant-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat totam quam maiores?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container lg-col-2">
+      <!-- contribute -->
+      <section class="card elevated contribute">
+        <h2 class="title-medium">
+          Show your love to BMaC!
+        </h2>
+        <form class="contribute-form" data-contribute-form>
+          <div class="counter-wrapper">
+            <div class="body-medium on-surface-variant-text counter-label">
+              <span class="material-symbols-rounded primary-text icon-small">
+                favorite
+              </span>
+              $1 each
+            </div>
+            <div class="counter">
+              <button type="button" class="icon-btn filled" data-decrement-btn>
+                <span class="material-symbols-rounded">
+                  remove
+                </span>
+                <div class="state-layer"></div>
+              </button>
+              <div class="text-field-wrapper counter-field">
+                <input type="number" name="amount" value="1" min="1" max="99999999" required class="text-field outlined body-large" data-counter-field data-form-field>
+              </div>
+              <button type="button" class="icon-btn filled" data-increment-btn>
+                <span class="material-symbols-rounded">
+                  add
+                </span>
+                <div class="state-layer"></div>
+              </button>
+            </div>
+          </div>
+          <div class="text-field-wrapper">
+            <label for="name" class="text-field-label body-large">Name</label>
+            <input type="text" 
+              name="name" 
+              id="name" 
+              placeholder="Name or @yourTwitter (optional)" 
+              class="text-field outlined body-large"
+              data-form-field
+            >
+          </div>
+          <div class="text-field-wrapper">
+            <label for="email" class="text-field-label body-large">Email*</label>
+            <input type="email" 
+              name="email" 
+              id="email" 
+              placeholder="Your email here" 
+              class="text-field outlined body-large"
+              data-form-field
+              required
+            >
+          </div>
+          <div class="text-field-wrapper">
+            <label for="message" class="text-field-label body-large">Message</label>
+            <textarea name="message" id="message" placeholder="Say sth (optional)" 
+              class="text-field outlined body-large" data-form-field></textarea>
+          </div>
+          <button type="submit" class="button filled label-large" data-submit-btn>
+            Contribute $<span data-total>1</span>
+            <div class="state-layer"></div>
+          </button>
+        </form>
+      </section>
+
+      <div>
+        <!-- #ABOUT -->
+        <section class="card outlined about">
+          <h2 class="title-medium">About</h2>
+          <p class="card-text on-surface-variant-text body-medium">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe id nostrum excepturi. Fuga accusamus, sit nobis enim dolorum provident dignissimos?
+          </p>
+          <!-- <p class="on-surface-variant-text body-medium wrapper"></p> -->
+          <ul class="social-list">
+            <li>
+              <a href="mailto:dmytroony@gmail.com">
+                <span class="material-symbols-rounded icon-small">
+                  alternate_email
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="social-link">
+                <img src="/images/youtube.svg" width="24" height="24" alt="youtube">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="social-link">
+                <img src="/images/instagram.svg" width="24" height="24" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="social-link">
+                <img src="/images/x.svg" width="24" height="24" alt="twitter">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="social-link">
+                <img src="/images/discord.svg" width="24" height="24" alt="discord">
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- #HISTORY -->
+        <section class="card outlined history">
+          <h2 class="title-medium">Recent supporters</h2>
+          <ul class="history-list">
+            <li class="history-card">
+              <div class="card-header">
+                <div class="card-avatar label-large">JD</div>
+                <h3 class="title-small card-title">
+                  John Doe contributed with <snap class="primary-text">$100</snap>
+                </h3>
+              </div>
+              <p class="card-body body-large on-surface-variant-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, ab!
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+    </div>
+
+  </article>
+</main>
+
+<!-- #FOOTER -->
+<footer class="footer">
+  <p class="body-medium on-surface-variant-text">
+    &copy; 2024 dmytr00ny
+  </p>
+</footer>
+
+</body>
+</html>
